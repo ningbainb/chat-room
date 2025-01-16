@@ -12,5 +12,13 @@
   "dependencies": {
     "ws": "^8.18.0"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ningbainb/ning.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ningbainb/ning/issues"
+  },
+  "homepage": "https://github.com/ningbainb/ning#readme",
   "description": ""
 }
