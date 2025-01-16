@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>局域网聊天室</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="chat-container">
+        <div class="chat-header">
+            <h1>局域网聊天室</h1>
+            <div class="header-controls">
+                <div class="online-count">
+                    <i class="online-icon">👥</i>
+                    <span id="onlineCount">0</span>
+                </div>
+                <div id="connection-status">未连接</div>
+                <button id="clearMessages" title="清空消息">🗑️</button>
+            </div>
+        </div>
+        
+        <div class="messages-container" id="messagesContainer">
+            <div class="messages-placeholder">等待消息...</div>
+        </div>
+        
+        <div class="input-container">
+            <div class="message-input-area">
+                <input type="text" id="messageInput" placeholder="输入消息..." autocomplete="off">
+                <button id="sendMessage">发送</button>
+                <button id="toggleTools" class="toggle-tools" title="工具栏">
+                    <span class="toggle-icon">+</span>
+                </button>
+            </div>
+            
+            <div class="tools-container" id="toolsContainer">
+                <div class="file-input-area">
+                    <input type="file" id="fileInput" aria-label="选择要发送的文件" multiple accept="image/*,video/*,audio/*,.pdf,.doc,.docx,.xls,.xlsx,.txt">
+                    <label for="fileInput" class="file-button">
+                        <i>📎</i>
+                        <span>选择文件</span>
+                    </label>
+                    <button id="sendFile" class="send-file-button">发送</button>
+                </div>
+                <div class="file-preview" id="filePreview">
+                    <div class="file-preview-header">
+                        <span>已选择文件</span>
+                        <button class="clear-files" id="clearFiles">清空</button>
+                    </div>
+                    <div class="file-list"></div>
+                    <div class="upload-progress">
+                        <div class="progress-bar">
+                            <div class="progress-fill"></div>
+                        </div>
+                        <span class="progress-text">0%</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 
